@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578B039329C7954900E2E126 /* ViewControllerPreguntas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */; };
 		F18C99E229C4E54B00EDDCDA /* ViewControllerMatematik.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */; };
 		F1D69B3C29BFEC66001975F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D69B3B29BFEC66001975F5 /* AppDelegate.swift */; };
 		F1D69B3E29BFEC66001975F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D69B3D29BFEC66001975F5 /* SceneDelegate.swift */; };
 		F1D69B4029BFEC66001975F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D69B3F29BFEC66001975F5 /* ViewController.swift */; };
 		F1D69B4329BFEC66001975F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D69B4129BFEC66001975F5 /* Main.storyboard */; };
 		F1D69B4829BFEC68001975F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D69B4629BFEC68001975F5 /* LaunchScreen.storyboard */; };
-		F1D69B5029BFEFCC001975F5 /* Trajan Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1D69B4F29BFEFCC001975F5 /* Trajan Pro Regular.ttf */; };
 		F1EAB9D029C2B89D00BD9047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1EAB9CF29C2B89D00BD9047 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreguntas.swift; sourceTree = "<group>"; };
+		578B039429C7AD5900E2E126 /* Trajan Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trajan Pro Regular.ttf"; path = "../../../Downloads/Trajan Pro Regular/Trajan Pro Regular.ttf"; sourceTree = "<group>"; };
 		F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMatematik.swift; sourceTree = "<group>"; };
 		F1D69B3829BFEC66001975F5 /* ExamenHK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenHK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D69B3B29BFEC66001975F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +28,6 @@
 		F1D69B4229BFEC66001975F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1D69B4729BFEC68001975F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1D69B4929BFEC68001975F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1D69B4F29BFEFCC001975F5 /* Trajan Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trajan Pro Regular.ttf"; path = "../../../../Downloads/Trajan Pro Regular/Trajan Pro Regular.ttf"; sourceTree = "<group>"; };
 		F1EAB9CF29C2B89D00BD9047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,11 +65,12 @@
 				F1D69B3D29BFEC66001975F5 /* SceneDelegate.swift */,
 				F1D69B3F29BFEC66001975F5 /* ViewController.swift */,
 				F1D69B4129BFEC66001975F5 /* Main.storyboard */,
-				F1D69B4F29BFEFCC001975F5 /* Trajan Pro Regular.ttf */,
 				F1D69B4629BFEC68001975F5 /* LaunchScreen.storyboard */,
 				F1D69B4929BFEC68001975F5 /* Info.plist */,
 				F1EAB9CF29C2B89D00BD9047 /* Assets.xcassets */,
 				F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */,
+				578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */,
+				578B039429C7AD5900E2E126 /* Trajan Pro Regular.ttf */,
 			);
 			path = ExamenHK;
 			sourceTree = "<group>";
@@ -132,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D69B4829BFEC68001975F5 /* LaunchScreen.storyboard in Resources */,
-				F1D69B5029BFEFCC001975F5 /* Trajan Pro Regular.ttf in Resources */,
 				F1EAB9D029C2B89D00BD9047 /* Assets.xcassets in Resources */,
 				F1D69B4329BFEC66001975F5 /* Main.storyboard in Resources */,
 			);
@@ -145,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578B039329C7954900E2E126 /* ViewControllerPreguntas.swift in Sources */,
 				F18C99E229C4E54B00EDDCDA /* ViewControllerMatematik.swift in Sources */,
 				F1D69B4029BFEC66001975F5 /* ViewController.swift in Sources */,
 				F1D69B3C29BFEC66001975F5 /* AppDelegate.swift in Sources */,
