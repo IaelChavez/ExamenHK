@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163A270F29C8FF66001B9C42 /* ViewControllerCombina2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163A270E29C8FF66001B9C42 /* ViewControllerCombina2.swift */; };
 		578B039329C7954900E2E126 /* ViewControllerPreguntas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */; };
 		F18C99E229C4E54B00EDDCDA /* ViewControllerMatematik.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */; };
 		F1D69B3C29BFEC66001975F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D69B3B29BFEC66001975F5 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		163A270E29C8FF66001B9C42 /* ViewControllerCombina2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCombina2.swift; sourceTree = "<group>"; };
 		578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPreguntas.swift; sourceTree = "<group>"; };
 		578B039429C7AD5900E2E126 /* Trajan Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Trajan Pro Regular.ttf"; path = "../../../Downloads/Trajan Pro Regular/Trajan Pro Regular.ttf"; sourceTree = "<group>"; };
 		F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMatematik.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				F1EAB9CF29C2B89D00BD9047 /* Assets.xcassets */,
 				F18C99E129C4E54B00EDDCDA /* ViewControllerMatematik.swift */,
 				578B039229C7954900E2E126 /* ViewControllerPreguntas.swift */,
+				163A270E29C8FF66001B9C42 /* ViewControllerCombina2.swift */,
 				578B039429C7AD5900E2E126 /* Trajan Pro Regular.ttf */,
 			);
 			path = ExamenHK;
@@ -151,6 +154,7 @@
 				F1D69B4029BFEC66001975F5 /* ViewController.swift in Sources */,
 				F1D69B3C29BFEC66001975F5 /* AppDelegate.swift in Sources */,
 				F1D69B3E29BFEC66001975F5 /* SceneDelegate.swift in Sources */,
+				163A270F29C8FF66001B9C42 /* ViewControllerCombina2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
