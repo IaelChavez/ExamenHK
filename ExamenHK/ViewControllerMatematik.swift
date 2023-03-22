@@ -12,6 +12,7 @@ class ViewControllerMatematik: UIViewController {
     @IBOutlet weak var btnResultado3: UIButton!
     
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var rachaLabel: UILabel!
     @IBOutlet weak var imageVidas: UIImageView!
     @IBOutlet weak var score: UILabel!
     
@@ -20,14 +21,18 @@ class ViewControllerMatematik: UIViewController {
     @IBOutlet weak var btnAvanzado: UIButton!
     
     var operadores:[String] = ["+","-","*","/"]
-        var puntuacion:Int = 0
-        var vidasRestantes:Int = 3
+    var puntuacion:Int = 0
+    var vidasRestantes:Int = 3
     var limitePuntos: Int = 0
+    var racha: Int = 0
         
         var respFinal: Double = 0
 
         override func viewDidLoad() {
-            score.text = "Score: "
+            score.text = "Score: \(puntuacion)"
+            rachaLabel.text = "Racha: \(racha)"
+            numero1.text = ""
+            numero2.text = ""
             resetButtons()
         }
         
@@ -89,16 +94,20 @@ class ViewControllerMatematik: UIViewController {
         }
         
         func RespuestaCorrecta(){
-            image.image = UIImage(named: "Correcto.jpg")
-            puntuacion = puntuacion+1
+            image.image = UIImage(named: "correcto")
+            puntuacion += 1
+            racha +=  1
             score.text = "Score: " + String(puntuacion)
+            rachaLabel.text = "Racha: \(racha)"
             pararJuego()
             generarRandoms()
             asignarValores()
         }
         func RespuestaIncorrecta(){
-            image.image = UIImage(named: "false.png")
-            vidasRestantes = vidasRestantes-1
+            image.image = UIImage(named: "incorrecto")
+            vidasRestantes -= 1
+            racha = 0
+            rachaLabel.text = "Racha: \(racha)"
             if(vidasRestantes == 2){
                 imageVidas.image = UIImage(named: "2vidasw")
             }
@@ -141,11 +150,18 @@ class ViewControllerMatematik: UIViewController {
         func pararJuego(){
             if(puntuacion == limitePuntos){
                 score.text = "Score: " + String(puntuacion)
+                numero1.text = ""
+                numero2.text = ""
+                operador.text = ""
                 resetButtons()
             }
             else if(vidasRestantes == 0){
                 imageVidas.image = UIImage(named: "")
+                image.image = UIImage(named: "incorrecto")
                 score.text = "Score: " + String(puntuacion)
+                numero1.text = ""
+                numero2.text = ""
+                operador.text = ""
                 resetButtons()
             }
         }
@@ -161,6 +177,8 @@ class ViewControllerMatematik: UIViewController {
     }
     
     func nuevoJuego(_ vida: Int, _ limitePunto: Int){
+        puntuacion = 0
+        racha = 0
         asignarValores()
         vidasRestantes = vida
         limitePuntos = limitePunto
@@ -173,8 +191,15 @@ class ViewControllerMatematik: UIViewController {
     }
     
     @IBAction func btnResetAll(_ sender: Any) {
+        puntuacion = 0
+        racha = 0
         image.image = UIImage(named: "")
-        score.text = "Score: " + String(puntuacion)
+        imageVidas.image = UIImage(named: "vidascompletas")
+        score.text = "Score: \(puntuacion)"
+        rachaLabel.text = "Racha: \(racha)"
+        numero1.text = ""
+        numero2.text = ""
+        operador.text = ""
         resetButtons()
     }
     
@@ -192,7 +217,4 @@ class ViewControllerMatematik: UIViewController {
         imageVidas.image = UIImage(named: "1vida")
         nuevoJuego(1,10)
     }
-    
-
     }
-

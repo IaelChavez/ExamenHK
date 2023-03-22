@@ -1,10 +1,3 @@
-//
-//  ViewControllerPreguntas.swift
-//  ExamenHK
-//
-//  Created by ec2-user on 3/19/23.
-//
-
 import UIKit
 
 class ViewControllerPreguntas: UIViewController {
@@ -16,73 +9,74 @@ class ViewControllerPreguntas: UIViewController {
     @IBOutlet weak var btnReset: UIButton!
     @IBOutlet weak var labelPreguntas: UILabel!
     @IBOutlet weak var imageVidas: UIImageView!
+    @IBOutlet weak var imagePregunta: UIImageView!
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var rachaLabel: UILabel!
     
     var puntuacion:Int = 0
     var vidasRestantes:Int = 0
     var limitePuntos: Int = 0
-    var posicion:Int = 0
-    var preguntasSeleccionadas = [Pregunta]()
-        
+    var posicion: Int = 0
+    var racha: Int = 0
+    var preguntas = [Pregunta]()
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             score.text = "Score: \(puntuacion)"
+            rachaLabel.text = "Racha: \(racha)"
             labelPreguntas.text = ""
             resetButtons()
         }
         
+    func llenarPreguntas(){
+        preguntas = [
+            Pregunta(pregunta: "¿Hornet es una araña?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una pelona?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una jugador de lol?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una mano?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una lata?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una hormiga?",
+                     imagen: "2vidasw",
+                     respuesta: "True"),
+            Pregunta(pregunta: "¿Hornet es una jojo fan?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una tortuga?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una furra?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una loba?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una rata?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una cabra?",
+                     imagen: "1vida",
+                     respuesta: "False"),
+            Pregunta(pregunta: "¿Hornet es una vaca?",
+                     imagen: "1vida",
+                     respuesta: "False")
+            ]
+    }
+        
         func seleccionarPreguntas(){
-            var preguntas = [
-                Pregunta(pregunta: "¿Hornet es una araña?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una pelona?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una jugador de lol?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una mano?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una lata?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una hormiga?",
-                         imagen: "",
-                         respuesta: "True"),
-                Pregunta(pregunta: "¿Hornet es una jojo fan?",
-                         imagen: "",
-                         respuesta: "False"),
-                Pregunta(pregunta: "¿Hornet es una tortuga?",
-                         imagen: "",
-                         respuesta: "False"),
-                Pregunta(pregunta: "¿Hornet es una furra?",
-                         imagen: "",
-                         respuesta: "False"),
-                Pregunta(pregunta: "¿Hornet es una loba?",
-                         imagen: "",
-                         respuesta: "False"),
-                Pregunta(pregunta: "¿Hornet es una rata?",
-                         imagen: "",
-                         respuesta: "False"),
-                Pregunta(pregunta: "¿Hornet es una cabra?",
-                         imagen: "",
-                         respuesta: "False"),
-                    Pregunta(pregunta: "¿Hornet es una vaca?",
-                             imagen: "",
-                             respuesta: "False")
-                ]
-            let numPreguntas = 11
-            var i = 0
-            while preguntasSeleccionadas.count < numPreguntas {
-                let preguntaAleatoria = preguntas.randomElement()!
-                if(preguntas[i].pregunta != preguntaAleatoria.pregunta ){
-                    preguntasSeleccionadas.append(preguntaAleatoria)
-                    i += 1
-                }
-            }
-            labelPreguntas.text = "\(preguntasSeleccionadas[0].pregunta)"
+            posicion = Int.random(in: 0...preguntas.count-1)
+            labelPreguntas.text = "\(preguntas[posicion].pregunta)"
+            imagePregunta.image = UIImage(named: preguntas[posicion].imagen)
+            
         }
     func pararJuego(){
         if(puntuacion == limitePuntos){
@@ -107,12 +101,13 @@ class ViewControllerPreguntas: UIViewController {
     }
     
     func nuevoJuego(_ vida: Int, _ limitePunto: Int){
+        llenarPreguntas()
         puntuacion = 0
-        posicion = 0
+        racha = 0
+        seleccionarPreguntas()
         labelPreguntas.text = ""
         score.text = "Score: \(puntuacion)"
-        preguntasSeleccionadas = [Pregunta]()
-        seleccionarPreguntas()
+        rachaLabel.text = "Racha: \(racha)"
         vidasRestantes = vida
         limitePuntos = limitePunto
         
@@ -122,17 +117,20 @@ class ViewControllerPreguntas: UIViewController {
         btnBasico.isEnabled = false
         btnIntermedio.isEnabled = false
         btnAvanzado.isEnabled = false
+        seleccionarPreguntas()
     }
     
     func comprobarRespuesta(_ title: String){
         
-        if(title == preguntasSeleccionadas[posicion].respuesta || title == preguntasSeleccionadas[posicion].respuesta ) {
+        if(title == preguntas[posicion].respuesta) {
             puntuacion += 1
+            racha += 1
             print("correcto")
         }
         else{
             print("incorrecto")
             vidasRestantes -= 1
+            racha = 0
             if(vidasRestantes == 2){
                 imageVidas.image = UIImage(named: "2vidasw")
             }
@@ -143,9 +141,10 @@ class ViewControllerPreguntas: UIViewController {
                 imageVidas.image = UIImage(named: "")
             }
         }
-        posicion += 1
-        labelPreguntas.text = "\(preguntasSeleccionadas[posicion].pregunta)"
         score.text = "Score: \(puntuacion)"
+        rachaLabel.text = "Racha: \(racha)"
+        preguntas.remove(at: posicion)
+        seleccionarPreguntas()
         pararJuego()
         
     }
@@ -161,9 +160,11 @@ class ViewControllerPreguntas: UIViewController {
     }
     
     @IBAction func btnResetAll(_ sender: UIButton) {
-        imageVidas.image = UIImage(named: "")
+        imageVidas.image = UIImage(named: "vidascompletas")
+        imagePregunta.image = UIImage(named: "")
         labelPreguntas.text = ""
         score.text = "Score: 0"
+        rachaLabel.text = "Racha: 0"
         resetButtons()
         
     }

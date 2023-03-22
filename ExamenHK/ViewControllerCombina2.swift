@@ -10,15 +10,28 @@ class ViewControllerCombina2: UIViewController {
     @IBOutlet weak var btnReiniciarJuego: UIButton!
     
     var jugadores = [
-        Jugador(turno: <#T##Int#>, posicion: <#T##Int#>, puntos: <#T##Int#>, racha: <#T##Int#>, vidas: <#T##Int#>),
-        Jugador(turno: <#T##Int#>, posicion: <#T##Int#>, puntos: <#T##Int#>, racha: <#T##Int#>, vidas: <#T##Int#>)
+        Jugador(turno: 0, posicion: 0, puntos: 0, racha: 0, vidas: 0),
+        Jugador(turno: 0, posicion: 0, puntos: 0, racha: 0, vidas: 0)
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    func nuevaPartida(){
+        var jugadorInicial: Int = Int.random(in: 0...1)
+        if(jugadorInicial == jugadores[0].turno){
+            jugadores[0].turno = 1
+            jugadores[1].turno = 2
+        }
+        else{
+            jugadores[1].turno = 1
+            jugadores[0].turno = 2
+            
+        }
+    }
+    
+    
     
     func terminarPartida(){
         
