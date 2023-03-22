@@ -46,9 +46,27 @@ class ViewControllerCombina2: UIViewController {
         let index: Int = Int.random(in: 0...3)
         let falso1: Int = Int.random(in: 0...100)
         let falso2: Int = Int.random(in: 0...1000)
+        let correcto: Int = Int.random(in: 0...2)
+        
         var cadena = "\(n1)\(index)\(n2)"
         var respuesta = calcularExp(cadena)
         preguntaLabel.text = cadena
+        
+        if(correcto == 0){
+            btnRespuesta1.setTitle(String(respuesta), for: .normal)
+            btnRespuesta2.setTitle(String(Double(falso1)), for: .normal)
+            btnRespuesta3.setTitle(String(Double(falso2)), for: .normal)
+        }
+        else if(correcto == 1){
+            btnRespuesta2.setTitle(String(respuesta), for: .normal)
+            btnRespuesta3.setTitle(String(Double(falso1)), for: .normal)
+            btnRespuesta1.setTitle(String(Double(falso2)), for: .normal)
+        }
+        else if(correcto == 2){
+            btnRespuesta3.setTitle(String(respuesta), for: .normal)
+            btnRespuesta1.setTitle(String(Double(falso1)), for: .normal)
+            btnRespuesta2.setTitle(String(Double(falso2)), for: .normal)
+        }
         
         print("Respuesta: \(cadena)")
     }
