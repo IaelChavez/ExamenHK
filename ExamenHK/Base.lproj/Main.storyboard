@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ffV-gG-OQh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dvt-WN-o7K">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -379,6 +379,45 @@
                                 <rect key="frame" x="-60" y="0.0" width="514" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKX-XH-HbO">
+                                <rect key="frame" x="17" y="719" width="113" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Respuesta1">
+                                    <fontDescription key="titleFontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ActionLanzarDado:" destination="ffV-gG-OQh" eventType="touchUpInside" id="iYn-fE-wk0"/>
+                                    <action selector="actionRespuesta1:" destination="ffV-gG-OQh" eventType="touchUpInside" id="uNu-mV-oYn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3n-4J-UmR">
+                                <rect key="frame" x="143" y="719" width="113" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Respuesta2">
+                                    <fontDescription key="titleFontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ActionLanzarDado:" destination="ffV-gG-OQh" eventType="touchUpInside" id="OUb-q9-F2E"/>
+                                    <action selector="actionRespuesta2:" destination="ffV-gG-OQh" eventType="touchUpInside" id="CeJ-Nj-7si"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-TD-kAL">
+                                <rect key="frame" x="264" y="719" width="113" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Respuesta3">
+                                    <fontDescription key="titleFontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ActionLanzarDado:" destination="ffV-gG-OQh" eventType="touchUpInside" id="zcT-k4-VVN"/>
+                                    <action selector="actionRespuesta3:" destination="ffV-gG-OQh" eventType="touchUpInside" id="NHs-qv-MTW"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Racha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-Zy-Loh">
                                 <rect key="frame" x="281" y="112" width="93" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -477,13 +516,6 @@
                                 <rect key="frame" x="281" y="405" width="52" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-qq-Z1R">
-                                <rect key="frame" x="176" y="748" width="42" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP2-et-rOx">
                                 <rect key="frame" x="14" y="780" width="118" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -516,24 +548,6 @@
                                     <action selector="actionReiniciar:" destination="ffV-gG-OQh" eventType="touchUpInside" id="ldV-aw-42Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTo-R7-yJ5">
-                                <rect key="frame" x="37" y="708" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdo-pk-mTr">
-                                <rect key="frame" x="159" y="708" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki8-wM-wF5">
-                                <rect key="frame" x="270" y="708" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpl-rC-jat">
                                 <rect key="frame" x="37" y="87" width="93" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -548,6 +562,20 @@
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Racha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff8-gi-ikB">
+                                <rect key="frame" x="28" y="652" width="337" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turno " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-PP-LTq">
+                                <rect key="frame" x="143" y="633" width="121" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrajanPro-Regular" family="Trajan Pro" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rxu-hB-Flb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -555,9 +583,16 @@
                     <connections>
                         <outlet property="btnLanzarDado" destination="pP2-et-rOx" id="0JJ-A6-212"/>
                         <outlet property="btnReiniciarJuego" destination="XHB-V4-qRy" id="yQy-Ci-8oQ"/>
-                        <outlet property="btnRespuesta1" destination="yTo-R7-yJ5" id="14T-1L-R0A"/>
-                        <outlet property="btnRespuesta2" destination="Fdo-pk-mTr" id="ynl-0e-s1K"/>
-                        <outlet property="btnRespuesta3" destination="Ki8-wM-wF5" id="9Tw-6N-TdP"/>
+                        <outlet property="btnRespuesta1" destination="PKX-XH-HbO" id="ZfZ-Dc-YWe"/>
+                        <outlet property="btnRespuesta2" destination="y3n-4J-UmR" id="Ewe-x0-TT4"/>
+                        <outlet property="btnRespuesta3" destination="Lg7-TD-kAL" id="qUs-dN-dpZ"/>
+                        <outlet property="imageDados" destination="qai-eC-78U" id="Uzx-bk-Ov9"/>
+                        <outlet property="preguntaLabel" destination="Ff8-gi-ikB" id="vOe-Rj-mJL"/>
+                        <outlet property="rachaJugador1" destination="tsK-7e-Kge" id="7tw-lj-2Q7"/>
+                        <outlet property="rachaJugador2" destination="ukg-Zy-Loh" id="0j7-7O-L1c"/>
+                        <outlet property="scoreJugador1" destination="xpl-rC-jat" id="ASG-bJ-3co"/>
+                        <outlet property="scoreJugador2" destination="Ewg-Ka-V8N" id="VxK-eS-BED"/>
+                        <outlet property="turnoLabel" destination="aAh-PP-LTq" id="ZTg-WP-mvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckd-8X-os4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

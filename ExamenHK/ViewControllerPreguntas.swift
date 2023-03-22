@@ -30,45 +30,54 @@ class ViewControllerPreguntas: UIViewController {
         
     func llenarPreguntas(){
         preguntas = [
-            Pregunta(pregunta: "¿Hornet es una araña?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una pelona?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una jugador de lol?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una mano?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una lata?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una hormiga?",
-                     imagen: "2vidasw",
-                     respuesta: "True"),
-            Pregunta(pregunta: "¿Hornet es una jojo fan?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una tortuga?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una furra?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una loba?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una rata?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una cabra?",
-                     imagen: "1vida",
-                     respuesta: "False"),
-            Pregunta(pregunta: "¿Hornet es una vaca?",
-                     imagen: "1vida",
-                     respuesta: "False")
+            Pregunta(pregunta: "La historia de Hollow Knight gira en torno a un caballero que busca explorar un reino subterráneo lleno de insectos:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El juego fue desarrollado por la compañía Team Cherry:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "Hollow Knight fue lanzado en 2018:",
+            imagen: "1vida",
+            respuesta: "False"),
+            Pregunta(pregunta: "El juego cuenta con un sistema de combate basado en esquivar y atacar:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El personaje principal puede saltar indefinidamente sin caer:",
+            imagen: "1vida",
+            respuesta: "False"),
+            Pregunta(pregunta: "El juego cuenta con un modo multijugador:",
+            imagen: "1vida",
+            respuesta: "False"),
+            Pregunta(pregunta: "El personaje principal puede adquirir nuevas habilidades a lo largo del juego:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El reino subterráneo en el que se desarrolla la historia de Hollow Knight se llama Hallownest:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El juego cuenta con una gran cantidad de jefes para derrotar:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "La música del juego fue compuesta por Christopher Larkin:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El jugador puede elegir diferentes armas para luchar:",
+            imagen: "1vida",
+            respuesta: "False"),
+            Pregunta(pregunta: "El jugador puede equipar diferentes amuletos para obtener habilidades especiales:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "La moneda del juego se llama Geo:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El jugador puede explorar diferentes áreas del reino subterráneo en el orden que prefiera:",
+            imagen: "1vida",
+            respuesta: "False"),
+            Pregunta(pregunta: "La dificultad del juego aumenta gradualmente a medida que avanza el jugador:",
+            imagen: "1vida",
+            respuesta: "True"),
+            Pregunta(pregunta: "El juego cuenta con un sistema de guardado automático:",
+            imagen: "1vida",
+            respuesta: "True")
             ]
     }
         
@@ -76,6 +85,7 @@ class ViewControllerPreguntas: UIViewController {
             posicion = Int.random(in: 0...preguntas.count-1)
             labelPreguntas.text = "\(preguntas[posicion].pregunta)"
             imagePregunta.image = UIImage(named: preguntas[posicion].imagen)
+            print(preguntas[posicion].respuesta)
             
         }
     func pararJuego(){
@@ -125,10 +135,8 @@ class ViewControllerPreguntas: UIViewController {
         if(title == preguntas[posicion].respuesta) {
             puntuacion += 1
             racha += 1
-            print("correcto")
         }
         else{
-            print("incorrecto")
             vidasRestantes -= 1
             racha = 0
             if(vidasRestantes == 2){
@@ -146,7 +154,6 @@ class ViewControllerPreguntas: UIViewController {
         preguntas.remove(at: posicion)
         seleccionarPreguntas()
         pararJuego()
-        
     }
     @IBAction func actionTrue(_ sender: UIButton) {
         guard let btnTitle = sender.titleLabel?.text else { return }
@@ -183,6 +190,9 @@ class ViewControllerPreguntas: UIViewController {
         imageVidas.image = UIImage(named: "1vida")
         nuevoJuego(1, 10)
     }
+    
+    
+    
 }
 
     struct Pregunta {
